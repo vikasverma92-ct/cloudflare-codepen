@@ -1,0 +1,97 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "style",
+        "src": "./source/app.css"
+      },
+      {
+        "type": "script",
+        "src": "./source/app.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["_default"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "location": {
+        "title": "Pen Location",
+        "description": "Pick a location where this Pen appear",
+        "order": 0,
+        "type": "object",
+        "format": "element",
+        "default": {
+          "selector": "body",
+          "method": "prepend"
+        }
+      },
+      "penURL": {
+        "type": "string",
+        "title": "Codepen URL",
+        "order": 1,
+        "format": "url",
+        "default": "https://codepen.io/vikasverma93/pen/raxGaM"
+      },
+      "theme": {
+        "order": 2,
+        "title": "Theme",
+        "type": "string",
+        "enum": [
+          "light",
+          "dark"
+        ],
+        "enumNames": {
+          "light": "Light",
+          "dark": "Dark"
+        },
+        "default": "light"
+      },
+      "defaultTab": {
+        "order": 3,
+        "title": "Default Tab",
+        "type": "string",
+        "enum": [
+          "html",
+          "css",
+          "js"
+        ],
+        "enumNames": {
+          "html": "HTML",
+          "css": "CSS",
+          "js": "JavaScript"
+        },
+        "default": "html"
+      },
+      "height": {
+        "type": "integer",
+        "title": "Pen Height",
+        "order": 4,
+        "default": 256,
+        "minimum": 200,
+        "maximum": 1000
+      },
+      "editable": {
+        "type": "string",
+        "title": "Editable Pen",
+        "description": "Note: Pen by a PRO user is editable",
+        "order": 5,
+        "enum": [
+          "true",
+          "false"
+        ],
+        "enumNames": {
+          "true": "True",
+          "false": "False"
+        },
+        "default": "false"
+      }
+    }
+  }
+}

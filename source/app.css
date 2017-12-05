@@ -1,0 +1,6 @@
+/* Set the app attribute to your app's dash-delimited alias. */
+cloudflare-app[app="codepen"] {
+  display: block;
+  margin: .5em 0;
+  padding: 0;
+}
